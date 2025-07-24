@@ -112,6 +112,9 @@ section.topo-do-site .flex {
 }
 
 .topo-do-site .img-topo-site img {
+    width: 150%; 
+    max-width: 150%;
+    height: auto;
     position: relative;
     animation: flutuar 2s ease-in-out infinite alternate;
 }
@@ -125,6 +128,8 @@ section.topo-do-site .flex {
         top: 30px;
     }
 }
+
+
 
 /*ESTILO DAS ESPECIALIDADES */
 
@@ -202,6 +207,19 @@ section.sobre {
     cursor: pointer;
     margin: 0 8px;
     transition: 1s;
+}
+
+.img-sobre { /* Modifique ESTA regra */
+    max-width: 500px; /* Defina uma largura máxima para o contêiner da imagem. Você pode ajustar este valor (ex: 450px, 600px) */
+    width: 300%; /* Garante que o contêiner ocupe 100% da largura disponível em telas menores, até o max-width */
+    /* height: auto; Não é necessário aqui, a altura do contêiner será definida pelo conteúdo */
+}
+
+.img-sobre img { /* E modifique ESTA regra, para que a imagem preencha o contêiner */
+    width: 100%; /* A imagem ocupará 100% da largura do seu contêiner (.img-sobre) */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Ajuda a remover espaços extras abaixo da imagem */
+    border-radius: 30px;
 }
 
 /*ESTILO DO PORTFÓLIO*/
@@ -363,7 +381,7 @@ footer .line-footer p a {
     transform: scale(1.1); /* Um pequeno efeito de escala ao passar o mouse */
 }
 
-/* RESPONSIVIDADE DO BOTÃO VOLTAR AO TOPO (APENAS HTML/CSS) */
+/* RESPONSIVIDADE DO BOTÃO VOLTAR AO TOPO  */
 @media screen and (max-width: 768px) {
     .btn-topo {
         bottom: 20px; /* Ajuste para telas menores */
